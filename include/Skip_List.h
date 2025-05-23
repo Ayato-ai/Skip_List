@@ -3,7 +3,7 @@
 // Noskov I.A.
 
 #pragma once
-#include<limits>
+#include<climits>
 #include<iostream>
 #include<list>
 #include<stdlib.h>
