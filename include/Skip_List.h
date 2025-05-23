@@ -73,8 +73,8 @@ private:
 
 public:
     SkipList() = default;
-    SkipList(int maxLevel) : maxLevel(maxLevel) {
-        head = new Node(0);
+    SkipList(std::size_t maxLevel) : maxLevel(maxLevel) {
+        head = new Node(INT_MIN);
         Node* temp = head;
 
         for (std::size_t i = 1; i < maxLevel; i++) {
@@ -83,7 +83,7 @@ public:
             temp = temp->down;
         }
 
-        temp->down = new Node(0);
+        temp->down = nullptr;
     }
     int get_maxLevel() const noexcept {
         return maxLevel;
@@ -119,7 +119,7 @@ public:
         Node* temp_1 = head;
         std::size_t i = 0;
         while (temp_1) {
-            std::cout << "Óðîâåíü ¹ " << i << " - ";
+            std::cout << "Ã“Ã°Ã®Ã¢Ã¥Ã­Ã¼ Â¹ " << i << " - ";
             i++;
             Node* temp_2 = temp_1->next;
 
