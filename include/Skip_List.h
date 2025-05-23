@@ -74,11 +74,11 @@ private:
 public:
     SkipList() = default;
     SkipList(std::size_t maxLevel) : maxLevel(maxLevel) {
-        head = new Node(INT_MIN);
+        head = new Node(std::INT_MIN);
         Node* temp = head;
 
         for (std::size_t i = 1; i < maxLevel; i++) {
-            temp->down = new Node(0);
+            temp->down = new Node(std::INT_MIN);
             temp->down->up = temp;
             temp = temp->down;
         }
